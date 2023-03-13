@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*-------------GENERAL SETTINGS--------------*/
+
+html, body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*-------------NAVBAR--------------*/
+
+.navbar_container {
+  background-color: black;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom_link_nav {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff
+}
+
+/*-------------HOME-PAGE--------------*/
+
+.home_page_container {
   display: flex;
   flex-direction: column;
+  gap: 2.3rem;
+  margin: 1rem
+}
+
+.home_page_container .home-page-beer-section img {
+  width: 100%;
+  filter: saturate(50%);
+}
+
+.home_page_container .home-page-beer-section .custom_link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000
+}
+
+/*-------------BEERS-PAGE--------------*/
+
+.beers_page_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  margin: 1rem
+}
+
+.beers_page_container .search_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.beers_page_container .beers_container_map {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.beers_page_container .beers_container_map .beer_container {
+  display: flex;
   align-items: center;
+  gap: 1rem
+}
+
+.beers_page_container .beer_container .beer_image {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.beers_page_container .beer_container .beer_image img{
+  height: 8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.beers_page_container .beer_container .beer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0.3rem;
 }
+
+.beers_page_container .beer_container .beer-info .custom_link_beers {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
+}
+
+
+/*-------------DETAIL-BEER-PAGE--------------*/
+
+.beer_page_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  margin: 1rem
+}
+
+.beer_page_container .beer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.beer_page_container .beer_container .beer_image {
+  display: flex;
+  justify-content: center;
+}
+
+.beer_page_container .beer_container .beer_image img {
+  height: 20rem;
+}
+
+.beer_page_container .beer_container .beer_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.beer_page_container .beer_container .beer_info .first {
+  display: flex;
+  justify-content: space-between;
+}
+
+.beer_page_container .beer_container .beer_info .second {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*-------------ADD-BEER-PAGE--------------*/
+
+.new_beer_page_container {
+  margin: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form label {
+  margin: 1rem 0;
+}
+
+.form .button_form  {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+/*-------------ERROR-PAGE--------------*/
+
+
+
+
